@@ -144,4 +144,9 @@ ggsave("GSEA_TopTerm.png", plot = last_plot(), width = 8, height = 6)
 
 
 write.csv(results, "Breast_Tumor_vs_Normal_DEG_results.csv")
+write.csv(as.data.frame(kegg_enrich),
++           file = "kegg_enrichment.csv", row.names = FALSE)
+write.csv(as.data.frame(go_enrich), 
+          file = "results/go_enrichment.csv", 
+          row.names = FALSE)
 
